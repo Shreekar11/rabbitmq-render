@@ -11,3 +11,8 @@ services:
     ports:
       - port: 5672
       - port: 15672
+    envVars:
+      - key: RABBITMQ_DEFAULT_USER
+        value: yourusername
+      - key: RABBITMQ_DEFAULT_PASS
+        value: yourpassword

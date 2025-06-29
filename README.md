@@ -13,10 +13,23 @@ This repo sets up a self-hosted RabbitMQ server on [Render](https://render.com/)
 
 ## Default Credentials
 
-- Username: `guest`
-- Password: `guest`
+- Username: `guest` (change via env var)
+- Password: `guest` (change via env var)
 
-> Change these in production by setting `RABBITMQ_DEFAULT_USER` and `RABBITMQ_DEFAULT_PASS` in environment variables.
+> **Change these in production!**
+> Set `RABBITMQ_DEFAULT_USER` and `RABBITMQ_DEFAULT_PASS` in your `render.yaml` or Render dashboard to override the defaults.
+
+## Setting Custom Credentials
+
+In your `render.yaml`:
+
+```yaml
+    envVars:
+      - key: RABBITMQ_DEFAULT_USER
+        value: yourusername
+      - key: RABBITMQ_DEFAULT_PASS
+        value: yourpassword
+```
 
 ## Connecting from Other Render Services
 
