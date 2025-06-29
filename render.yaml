@@ -1,0 +1,13 @@
+services:
+  - type: private
+    name: rabbitmq
+    env: docker
+    plan: starter
+    disk:
+      name: rabbitmq-data
+      mountPath: /var/lib/rabbitmq
+      sizeGB: 1
+    autoDeploy: true
+    ports:
+      - port: 5672
+      - port: 15672
