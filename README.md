@@ -38,4 +38,8 @@ If your app is hosted on Render too, use:
 `amqp://guest:guest@rabbitmq:5672`
 
 
+## Accessing Management UI
 
+Enable port `15672` to access the RabbitMQ Management UI.
+
+If this is a private service, the UI is only accessible from other Render services (or via SSH tunnel).
